@@ -1,0 +1,14 @@
+@import 'scree-size';
+@import 'theme';
+
+.header {
+  background-color: $main-bg;
+}
+
+@media (max-width: $mobile) {
+  .header {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+  }
+}

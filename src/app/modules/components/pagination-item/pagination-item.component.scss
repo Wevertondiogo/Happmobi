@@ -1,0 +1,11 @@
+$space: 20px;
+
+.pagination-content {
+  display: grid;
+  padding: $space;
+  gap: $space;
+
+  & > * {
+    margin: auto;
+  }
+}

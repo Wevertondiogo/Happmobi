@@ -1,0 +1,13 @@
+<div class="controls-content">
+  <button  class="control-item"  [disabled]="isFirst">
+    <i class="fa fa-2x fa-chevron-left" (click)="prevPage()" aria-hidden="true" ></i>
+  </button>
+  <button class="control-item" [disabled]="isLast">
+    <i class="fa fa-2x fa-chevron-right" (click)="nextPage()"  aria-hidden="true"></i>
+  </button>
+  <div class="page-score">
+   <h2>
+    {{ page }} | {{totalPages}}
+   </h2>
+  </div>
+</div>

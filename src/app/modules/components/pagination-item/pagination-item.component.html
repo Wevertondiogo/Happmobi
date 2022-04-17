@@ -1,0 +1,8 @@
+<section class="pagination-content">
+  <h2 class="pagination-content-title" *ngIf="showAnimation" @fadeIn @fadeOut>
+    {{ pagination?.title }}
+  </h2>
+  <div class="pagination-content-description" *ngIf="showAnimation" @fadeIn @fadeOut>
+    {{ pagination?.description }}
+  </div>
+</section>

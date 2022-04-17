@@ -1,0 +1,58 @@
+@import 'scree-size';
+@import 'theme';
+
+$height-to-content: 60px;
+
+.navbar {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 2fr 1fr;
+  gap: $height-to-content;
+  height: $height-to-content;
+
+
+  &-nav {
+    display: grid;
+    justify-content: end;
+    padding-right: $height-to-content;
+    .menu {
+      color: $main-color;
+      cursor: pointer;
+    }
+  }
+
+  &-brand {
+    a {
+      padding-left: $height-to-content;
+      color: $main-color;
+    }
+  }
+  &-list {
+    display: flex;
+    justify-content: space-between;
+    width: 150px;
+    &-item {
+      list-style-type: none;
+    }
+  }
+}
+
+
+@media (max-width: $mobile) {
+  .navbar {
+    grid-template-columns: repeat(2, 1fr);
+    &-nav {
+      justify-content: center;
+      padding: 0;
+    }
+
+    &-brand {
+      display: grid;
+      justify-content: center;
+      a {
+        padding: 0;
+        margin-right: 15px;
+      }
+    }
+  }
+}

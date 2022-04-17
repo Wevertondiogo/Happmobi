@@ -1,0 +1,57 @@
+@import 'scree-size';
+@import 'theme';
+
+$space: 15px;
+.controls-content {
+  position: fixed;
+  right: 51px;
+  top: 50%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  transform: translate(50%, -50%);
+  width: 92px;
+  border-radius: 10px;
+  background-color: $main-bg;
+  gap: $space;
+
+  & >  * {
+    padding: $space;
+  }
+
+  .control-item {
+    background-color: transparent;
+    color: $main-color;
+    border: 2px solid transparent;
+    cursor: pointer;
+  }
+  .control-item[disabled] {
+    opacity: .7;
+  }
+  .page-score {
+    text-align: center;
+    font-size: 1.7rem;
+    color: $main-color;
+    border-top: 2px solid $main-color;
+    width: 100%;
+  }
+}
+
+@media (max-width: $mobile) {
+  .controls-content {
+    width: 110px;
+    top: auto;
+    bottom: 2px;
+    right: 50%;
+    transform: translate(50%, 0%);
+    box-shadow: 0 0 3px $main-color;
+    gap: 0;
+
+    .control-item {
+      padding: 10px;
+    }
+    .page-score {
+      padding: 0;
+    }
+  }
+}
